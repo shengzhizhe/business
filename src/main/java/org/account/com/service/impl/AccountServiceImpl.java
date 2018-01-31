@@ -65,17 +65,6 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
-    public ResponseResult putPWD(String account, String password) {
-        logger.info(Sl4jToString.info(1,
-                serviceName,
-                Thread.currentThread().getStackTrace()[1].getMethodName(),
-                account + "," + password,
-                200,
-                null));
-        return result;
-    }
-
-    @Override
     public ResponseResult getById(String id) {
         logger.info(Sl4jToString.info(1,
                 serviceName,

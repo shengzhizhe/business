@@ -55,18 +55,6 @@ public class AccountController {
         return accountService.findAllPage(pageNow, pageSize, type, account);
     }
 
-
-    @ApiOperation(value = "根据账户修改密码",
-            notes = "200:成功，500：失败，201：该账户已不存在",
-            response = ResponseResult.class,
-            httpMethod = "POST")
-    @RequestMapping(value = "/pwd",
-            method = RequestMethod.POST)
-    public ResponseResult password(@RequestParam("account") String account,
-                                   @RequestParam("password") String password) {
-        return accountService.putPWD(account, password);
-    }
-
     @ApiOperation(value = "根据id删除",
             notes = "200:成功；500:失败，201：该账户不存在",
             response = ResponseResult.class,

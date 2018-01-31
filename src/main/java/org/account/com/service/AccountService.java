@@ -16,15 +16,6 @@ public interface AccountService {
     ResponseResult add(BusinessAccountModel model);
 
     /**
-     * 修改密码
-     *
-     * @param account
-     * @param password
-     * @return
-     */
-    ResponseResult putPWD(String account, String password);
-
-    /**
      * 根据id获取实体
      *
      * @param id
