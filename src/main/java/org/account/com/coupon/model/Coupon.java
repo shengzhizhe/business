@@ -1,4 +1,4 @@
-package org.account.com.model;
+package org.account.com.coupon.model;
 
 import java.io.Serializable;
 //优惠券

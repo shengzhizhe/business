@@ -31,38 +31,38 @@ public class AccountServiceImpl implements AccountService {
     @Override
     public ResponseResult add(BusinessAccountModel model) {
         logger.info(Sl4jToString.info(1,
-                serviceName,
-                Thread.currentThread().getStackTrace()[1].getMethodName(),
+    serviceName,
+            Thread.currentThread().getStackTrace()[1].getMethodName(),
                 model.toString(),
-                200,
-                null));
-        BusinessAccountModel model1 = mapper.getByAccount(model.getAccount());
+                        200,
+                        null));
+    BusinessAccountModel model1 = mapper.getByAccount(model.getAccount());
         if (model1 != null) {
-            result.setSuccess(false);
-            result.setCode(501);
-        } else {
-            model.setUuid(GetUuid.getUUID());
-            int i = mapper.add(model);
-            switch (i) {
-                case 1:
-                    result.setSuccess(true);
-                    result.setCode(200);
-                    result.setMessage(model.getUuid());
-                    break;
-                default:
-                    result.setSuccess(false);
-                    result.setCode(500);
-                    break;
-            }
+        result.setSuccess(false);
+        result.setCode(501);
+    } else {
+        model.setUuid(GetUuid.getUUID());
+        int i = mapper.add(model);
+        switch (i) {
+            case 1:
+                result.setSuccess(true);
+                result.setCode(200);
+                result.setMessage(model.getUuid());
+                break;
+            default:
+                result.setSuccess(false);
+                result.setCode(500);
+                break;
         }
-        logger.info(Sl4jToString.info(2,
-                serviceName,
-                Thread.currentThread().getStackTrace()[1].getMethodName(),
-                model.toString(),
-                result.getCode(),
-                null));
-        return result;
     }
+        logger.info(Sl4jToString.info(2,
+    serviceName,
+            Thread.currentThread().getStackTrace()[1].getMethodName(),
+                model.toString(),
+                        result.getCode(),
+                        null));
+        return result;
+}
 
     @Override
     public ResponseResult getById(String id) {

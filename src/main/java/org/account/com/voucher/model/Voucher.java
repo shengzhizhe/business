@@ -1,4 +1,4 @@
-package org.account.com.model;
+package org.account.com.voucher.model;
 
 import java.sql.Timestamp;
 

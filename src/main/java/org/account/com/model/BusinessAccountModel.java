@@ -3,14 +3,16 @@ package org.account.com.model;
 import java.io.Serializable;
 
 /**
- * @name 账户资料
+ * @name 商家账户资料
  * @table account_table
  */
-public class BusinessAccountModel implements Serializable {
+    public class BusinessAccountModel implements Serializable {
     //    主键
     private String uuid;
     //    账号
     private String account;
+    //商家名称
+    private String businesnames;
     //营业执照
     private String licenseImg;
     //法人
@@ -46,6 +48,14 @@ public class BusinessAccountModel implements Serializable {
 
     public void setAccount(String account) {
         this.account = account;
+    }
+
+    public String getBusinesnames() {
+        return businesnames;
+    }
+
+    public void setBusinesnames(String businesnames) {
+        this.businesnames = businesnames;
     }
 
     public String getLicenseImg() {
@@ -146,11 +156,28 @@ public class BusinessAccountModel implements Serializable {
         this.businessType = businessType;
     }
 
+    public BusinessAccountModel(String uuid, String account, String businesnames, String licenseImg, String legalperson, String legalpersonIdNumber, String legalpersonPhone, String legalpersonTelephone, String servicePhone, String shopAddress, String scopeOperation, String industryLicense, String businessType) {
+        this.uuid = uuid;
+        this.account = account;
+        this.businesnames = businesnames;
+        this.licenseImg = licenseImg;
+        this.legalperson = legalperson;
+        this.legalpersonIdNumber = legalpersonIdNumber;
+        this.legalpersonPhone = legalpersonPhone;
+        this.legalpersonTelephone = legalpersonTelephone;
+        this.servicePhone = servicePhone;
+        this.shopAddress = shopAddress;
+        this.scopeOperation = scopeOperation;
+        this.industryLicense = industryLicense;
+        this.businessType = businessType;
+    }
+
     @Override
     public String toString() {
-        return "AccountModel{" +
+        return "BusinessAccountModel{" +
                 "uuid='" + uuid + '\'' +
                 ", account='" + account + '\'' +
+                ", businesnames='" + businesnames + '\'' +
                 ", licenseImg='" + licenseImg + '\'' +
                 ", legalperson='" + legalperson + '\'' +
                 ", legalpersonIdNumber='" + legalpersonIdNumber + '\'' +
