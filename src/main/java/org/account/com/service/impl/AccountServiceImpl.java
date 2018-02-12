@@ -31,11 +31,11 @@ public class AccountServiceImpl implements AccountService {
     @Override
     public ResponseResult add(BusinessAccountModel model) {
         logger.info(Sl4jToString.info(1,
-    serviceName,
-            Thread.currentThread().getStackTrace()[1].getMethodName(),
+                serviceName,
+                Thread.currentThread().getStackTrace()[1].getMethodName(),
                 model.toString(),
-                        200,
-                        null));
+                200,
+                null));
     BusinessAccountModel model1 = mapper.getByAccount(model.getAccount());
         if (model1 != null) {
         result.setSuccess(false);

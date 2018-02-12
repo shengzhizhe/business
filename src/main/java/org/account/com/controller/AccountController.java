@@ -34,9 +34,9 @@ import org.springframework.web.bind.annotation.*;
  * 请求参数无法使用@ApiImplicitParam注解进行描述的时候）
  * '@ApiModelProperty'：描述一个model的属性
  */
-@Api(value = "account", description = "账户")
+@Api(value = "businessaccount", description = "商家账户资料")
 @RestController
-@RequestMapping("/account")
+@RequestMapping("/businessaccount")
 public class AccountController {
 
     @Autowired

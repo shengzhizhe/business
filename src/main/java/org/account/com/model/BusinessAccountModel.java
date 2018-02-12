@@ -1,5 +1,7 @@
 package org.account.com.model;
 
+import org.hibernate.validator.constraints.NotBlank;
+
 import java.io.Serializable;
 
 /**
@@ -10,6 +12,7 @@ import java.io.Serializable;
     //    主键
     private String uuid;
     //    账号
+    @NotBlank(message = "账号不能为空", groups = {ADD.class, UPDATE.class})
     private String account;
     //商家名称
     private String businesnames;
