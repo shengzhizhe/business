@@ -1,20 +1,10 @@
-package org.account.com.service;
+package org.account.com.busdata.service;
 
-import org.account.com.model.BusinessAccountModel;
+import org.account.com.busdata.model.BusDataModel;
 import org.account.com.util.resultJson.ResponseResult;
 
-/**
- * @name 账户接口
- */
-public interface AccountService {
-    /**
-     * 新增账户
-     *
-     * @param model
-     * @return int
-     */
-    ResponseResult add(BusinessAccountModel model);
-
+public interface BusDataService {
+    ResponseResult add(BusDataModel busDataModel);
     /**
      * 根据id获取实体
      *
@@ -45,5 +35,13 @@ public interface AccountService {
      * @return
      */
     ResponseResult del(String id);
+
+    /**
+     * 修改商家资料
+     *
+     * @param model
+     * @return
+     */
+    ResponseResult update(BusDataModel model);
 
 }

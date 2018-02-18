@@ -1,6 +1,6 @@
 package org.account.com.activity.mapper.sql;
 
-import org.account.com.mapper.sql.AccountSql;
+import org.account.com.busdata.mapper.sql.AccountSql;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

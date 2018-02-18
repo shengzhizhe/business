@@ -4,8 +4,6 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.account.com.activity.model.Activity;
 import org.account.com.activity.service.ActivityService;
-import org.account.com.model.BusinessAccountModel;
-import org.account.com.service.AccountService;
 import org.account.com.util.resultJson.ResponseResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;

@@ -1,5 +1,4 @@
-package org.account.com.model;
-
+package org.account.com.busdata.model;
 import org.hibernate.validator.constraints.NotBlank;
 
 import java.io.Serializable;
@@ -8,7 +7,7 @@ import java.io.Serializable;
  * @name 商家账户资料
  * @table account_table
  */
-    public class BusinessAccountModel implements Serializable {
+public class BusDataModel implements Serializable {
     //    主键
     private String uuid;
     //    账号
@@ -36,6 +35,25 @@ import java.io.Serializable;
     private String industryLicense;
     //商家类型
     private String businessType;
+
+    public BusDataModel() {
+    }
+
+    public BusDataModel(String uuid, String account, String businesnames, String licenseImg, String legalperson, String legalpersonIdNumber, String legalpersonPhone, String legalpersonTelephone, String servicePhone, String shopAddress, String scopeOperation, String industryLicense, String businessType) {
+        this.uuid = uuid;
+        this.account = account;
+        this.businesnames = businesnames;
+        this.licenseImg = licenseImg;
+        this.legalperson = legalperson;
+        this.legalpersonIdNumber = legalpersonIdNumber;
+        this.legalpersonPhone = legalpersonPhone;
+        this.legalpersonTelephone = legalpersonTelephone;
+        this.servicePhone = servicePhone;
+        this.shopAddress = shopAddress;
+        this.scopeOperation = scopeOperation;
+        this.industryLicense = industryLicense;
+        this.businessType = businessType;
+    }
 
     public String getUuid() {
         return uuid;
@@ -141,43 +159,9 @@ import java.io.Serializable;
         this.businessType = businessType;
     }
 
-    public BusinessAccountModel() {
-    }
-
-    public BusinessAccountModel(String uuid, String account, String licenseImg, String legalperson, String legalpersonIdNumber, String legalpersonPhone, String legalpersonTelephone, String servicePhone, String shopAddress, String scopeOperation, String industryLicense, String businessType) {
-        this.uuid = uuid;
-        this.account = account;
-        this.licenseImg = licenseImg;
-        this.legalperson = legalperson;
-        this.legalpersonIdNumber = legalpersonIdNumber;
-        this.legalpersonPhone = legalpersonPhone;
-        this.legalpersonTelephone = legalpersonTelephone;
-        this.servicePhone = servicePhone;
-        this.shopAddress = shopAddress;
-        this.scopeOperation = scopeOperation;
-        this.industryLicense = industryLicense;
-        this.businessType = businessType;
-    }
-
-    public BusinessAccountModel(String uuid, String account, String businesnames, String licenseImg, String legalperson, String legalpersonIdNumber, String legalpersonPhone, String legalpersonTelephone, String servicePhone, String shopAddress, String scopeOperation, String industryLicense, String businessType) {
-        this.uuid = uuid;
-        this.account = account;
-        this.businesnames = businesnames;
-        this.licenseImg = licenseImg;
-        this.legalperson = legalperson;
-        this.legalpersonIdNumber = legalpersonIdNumber;
-        this.legalpersonPhone = legalpersonPhone;
-        this.legalpersonTelephone = legalpersonTelephone;
-        this.servicePhone = servicePhone;
-        this.shopAddress = shopAddress;
-        this.scopeOperation = scopeOperation;
-        this.industryLicense = industryLicense;
-        this.businessType = businessType;
-    }
-
     @Override
     public String toString() {
-        return "BusinessAccountModel{" +
+        return "BusDataModel{" +
                 "uuid='" + uuid + '\'' +
                 ", account='" + account + '\'' +
                 ", businesnames='" + businesnames + '\'' +
