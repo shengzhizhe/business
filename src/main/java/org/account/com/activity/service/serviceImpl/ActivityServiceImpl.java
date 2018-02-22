@@ -5,21 +5,20 @@ import com.github.pagehelper.PageHelper;
 import org.account.com.activity.mapper.ActivityMapper;
 import org.account.com.activity.model.Activity;
 import org.account.com.activity.service.ActivityService;
-import org.account.com.model.BusinessAccountModel;
-import org.account.com.service.impl.AccountServiceImpl;
 import org.account.com.util.resultJson.ResponseResult;
 import org.account.com.util.sl4j.Sl4jToString;
 import org.account.com.util.uuidUtil.GetUuid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-
+@Service
 public class ActivityServiceImpl implements ActivityService
 {
 
-    private static Logger logger = LoggerFactory.getLogger(AccountServiceImpl.class);
+    private static Logger logger = LoggerFactory.getLogger(ActivityServiceImpl.class);
 
     @Value("${spring.application.name}")
     private String serviceName;

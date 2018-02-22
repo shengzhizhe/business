@@ -5,7 +5,6 @@ import com.github.pagehelper.PageHelper;
 import org.account.com.busdata.mapper.BusDataMapper;
 import org.account.com.busdata.model.BusDataModel;
 import org.account.com.busdata.service.BusDataService;
-import org.account.com.service.impl.AccountServiceImpl;
 import org.account.com.util.resultJson.ResponseResult;
 import org.account.com.util.sl4j.Sl4jToString;
 import org.account.com.util.uuidUtil.GetUuid;
@@ -17,7 +16,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class BusDataServiceImpl implements BusDataService {
-    private static Logger logger = LoggerFactory.getLogger(AccountServiceImpl.class);
+    private static Logger logger = LoggerFactory.getLogger(BusDataServiceImpl.class);
     @Value("${spring.application.name}")
     private String serviceName;
     @Autowired

@@ -3,7 +3,6 @@ package org.account.com.coupon.service.serviceImpl;
 import org.account.com.coupon.mapper.CouponMapper;
 import org.account.com.coupon.model.Coupon;
 import org.account.com.coupon.service.CouponService;
-import org.account.com.service.impl.AccountServiceImpl;
 import org.account.com.util.resultJson.ResponseResult;
 import org.account.com.util.sl4j.Sl4jToString;
 import org.slf4j.Logger;
@@ -16,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.annotation.Resource;
 @Service
 public class CouponServiceImpl implements CouponService {
-    private static Logger logger = LoggerFactory.getLogger(AccountServiceImpl.class);
+    private static Logger logger = LoggerFactory.getLogger(CouponServiceImpl.class);
     @Value("${spring.application.name}")
     private String serviceName;
     @Autowired
