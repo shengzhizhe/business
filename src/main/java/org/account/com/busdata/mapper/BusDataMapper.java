@@ -16,9 +16,9 @@ public interface BusDataMapper {
      * @return int
      */
     @Insert({
-            "insert into " + tableName + " (uuid,account,licenseImg,legalperson,legalpersonIdNumber,legalpersonPhone" +
+            "insert into " + tableName + " (uuid,account,businesnames,licenseImg,legalperson,legalpersonIdNumber,legalpersonPhone" +
                     ",legalpersonTelephone,servicePhone,shopAddress,scopeOperation,industryLicense,businessType) " +
-                    "values (#{model.uuid},#{model.account},#{model.licenseImg},#{model.legalperson}}," +
+                    "values (#{model.uuid},#{model.account},#{model.businesnames},#{model.licenseImg},#{model.legalperson}," +
                     "#{model.legalpersonIdNumber},#{model.legalpersonPhone},#{model.legalpersonTelephone},#{model.servicePhone}" +
                     ",#{model.shopAddress},#{model.scopeOperation},#{model.industryLicense},#{model.businessType})"
     })
