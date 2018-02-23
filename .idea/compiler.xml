@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="account" />
+        <module name="business" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="account" target="1.8" />
+      <module name="business" target="1.8" />
       <module name="cloudaccount" target="1.8" />
     </bytecodeTargetLevel>
   </component>
