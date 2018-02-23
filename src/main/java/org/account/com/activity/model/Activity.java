@@ -21,22 +21,12 @@ public class Activity implements Serializable {
     private String address;
     //批次
     private String batch;
+    //行业分类
+    private String classification;
     //状态 0:尚未开启，1:正在进行，2:已经结束
     private Integer type;
 
     public Activity() {
-    }
-
-    public Activity(String uuid, String names, String content, Timestamp startTime, Timestamp endTime, String businessaccount, String address, String batch, Integer type) {
-        this.uuid = uuid;
-        this.names = names;
-        this.content = content;
-        this.startTime = startTime;
-        this.endTime = endTime;
-        this.businessaccount = businessaccount;
-        this.address = address;
-        this.batch = batch;
-        this.type = type;
     }
 
     public String getUuid() {
@@ -111,6 +101,27 @@ public class Activity implements Serializable {
         this.type = type;
     }
 
+    public String getClassification() {
+        return classification;
+    }
+
+    public void setClassification(String classification) {
+        this.classification = classification;
+    }
+
+    public Activity(String uuid, String names, String content, Timestamp startTime, Timestamp endTime, String businessaccount, String address, String batch, String classification, Integer type) {
+        this.uuid = uuid;
+        this.names = names;
+        this.content = content;
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.businessaccount = businessaccount;
+        this.address = address;
+        this.batch = batch;
+        this.classification = classification;
+        this.type = type;
+    }
+
     @Override
     public String toString() {
         return "Activity{" +
@@ -122,6 +133,7 @@ public class Activity implements Serializable {
                 ", businessaccount='" + businessaccount + '\'' +
                 ", address='" + address + '\'' +
                 ", batch='" + batch + '\'' +
+                ", classification='" + classification + '\'' +
                 ", type=" + type +
                 '}';
     }

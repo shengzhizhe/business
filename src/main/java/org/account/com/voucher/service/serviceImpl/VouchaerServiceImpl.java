@@ -97,7 +97,7 @@ public class VouchaerServiceImpl implements VoucherService{
                 code.toString(),
                 result.getCode(),
                 null));
-        return null;
+        return result;
     }
 
     @Override
