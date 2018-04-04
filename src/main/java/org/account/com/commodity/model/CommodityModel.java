@@ -6,7 +6,7 @@ public class CommodityModel {
     //商品名称
     private String cname;
     //商品价格
-    private String jg;
+    private Double jg;
     //商品单位
     private String dw;
    //商品规格
@@ -27,7 +27,7 @@ public class CommodityModel {
     public CommodityModel() {
     }
 
-    public CommodityModel(String uuid, String cname, String jg, String dw, String ge, String zt, String pp, String xq, String xl, String busid, int sl) {
+    public CommodityModel(String uuid, String cname, Double jg, String dw, String ge, String zt, String pp, String xq, String xl, String busid, int sl) {
         this.uuid = uuid;
         this.cname = cname;
         this.jg = jg;
@@ -57,11 +57,11 @@ public class CommodityModel {
         this.cname = cname;
     }
 
-    public String getJg() {
+    public Double getJg() {
         return jg;
     }
 
-    public void setJg(String jg) {
+    public void setJg(Double jg) {
         this.jg = jg;
     }
 

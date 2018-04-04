@@ -3,10 +3,7 @@ package org.account.com.activity.mapper;
 import com.github.pagehelper.Page;
 import org.account.com.activity.mapper.sql.ActivitySql;
 import org.account.com.activity.model.Activity;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.SelectProvider;
+import org.apache.ibatis.annotations.*;
 
 public interface ActivityMapper {
 
@@ -44,7 +41,7 @@ public interface ActivityMapper {
      * @param model Activity
      * @return int
      */
-    @Select({"INSERT INTO activity_table VALUES (#{model.uuid},#{model.names},#{model.content},#{model.startTime}" +
+    @Insert({"INSERT INTO activity_table VALUES (#{model.uuid},#{model.names},#{model.content},#{model.startTime}" +
             ",#{model.endTime},#{model.businessaccount},#{model.address},#{model.batch},#{model.type})"})
     int add(@Param("model") Activity model);
 

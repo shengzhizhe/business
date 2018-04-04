@@ -7,6 +7,7 @@ import org.account.com.commodity.model.CommodityModel;
 import org.account.com.commodity.service.CommodityService;
 import org.account.com.util.resultJson.ResponseResult;
 import org.account.com.util.sl4j.Sl4jToString;
+import org.account.com.util.uuidUtil.GetUuid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -92,6 +93,7 @@ public class CommodityServiceImp implements CommodityService {
                 ":"+model.getJg(),
                 200,
                 null));
+        model.setUuid(GetUuid.getUUID());
         int add = mapper.add(model);
         if (add>0){
             result.setSuccess(true);
